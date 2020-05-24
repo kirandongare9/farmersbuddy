@@ -1,0 +1,37 @@
+.header{
+     /*background:#ffe5c4;*/
+    }
+    
+    body{
+         background:#fffefd;
+    }
+ 
+  .form{
+      box-shadow: #c9e4ff 0px 0px 4px 1px;
+      border: 1px solid #ebefff;
+  } 
+  .body{
+    height:fit-content;
+    margin:auto;
+  }
+  .footer{
+    position:fixed;
+    bottom:0px;
+    left:0px;
+  }
+
+  #sigup-form-body .element .control{
+    padding:5px !important;
+  }
+  
+  #login{
+    padding: 5% 40% 5% 40%;
+  }
+
+
+  form#user {
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+  }

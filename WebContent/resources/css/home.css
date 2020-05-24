@@ -1,0 +1,252 @@
+body{
+  background-color: #fdffff;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.header .options.right{
+   position: absolute; 
+   right: 10%; 
+   top: 20%; 
+  display: flex !important;
+}
+.header .options button{
+   background:rgba(0,0,0,0);
+   border:1px solid ;
+   padding:2% 10% 2% 10%;
+   font:bold 100% 'Ubuntu';
+   border-radius:5px;
+   box-sizing:content-box;
+   width:fit-content;
+   height:fit-content;
+ }
+ 
+.header .button{
+  background-color: rgba(0,0,0,0);
+  border: solid 2px #26c2ef ;
+  padding: 5px 15px 5px 15px;
+  color:#26c2ef;
+  margin-left:15px;
+  border-radius:5px;
+  font:bold 100% "Ubuntu" , sans-serif;
+}
+.header .button:focus{
+  outline: none;
+}
+
+.header .button.green{
+  border-color:#a7ea7c;
+  color:#a7ea7c;
+}
+
+.header .button.yellow{
+  border-color:#f1e556;
+  color:#f1e556;
+}
+
+.header .button.saffron{
+  border-color:#ffa456;
+  color:#ffa456;
+}
+
+.header .button.green:hover{
+  border-color:#54bd0f;
+  color:#ffffff;
+  background-color:#6de322;
+}
+
+.header .button.yellow:hover{
+  border-color:#dad165;
+  color:#ffffff;
+  background-color:#fff364;
+}
+
+.header .button.saffron:hover{
+  border-color:#ffbc82;
+  color:#ffffff;
+  background-color:#ffa456;
+}
+
+.header .button.green.filled{
+  border-color:#67f909;
+  color:#ffffff;
+  background-color:#67f90a;
+}
+
+.header .button.yellow.filled{
+  border-color:#dad165;
+  color:#ffffff;
+  background-color:#fff364;
+}
+
+.header .button.saffron.filled{
+  border-color:#ffbc82;
+  color:#ffffff;
+  background-color:#ffa456;
+}
+
+.header .button.green.filled:hover{
+  border-color:#a7ea7c;
+  color:#a7ea7c;
+  background-color:#0000;
+}
+
+.header .button.yellow.filled:hover{
+  border-color:#f1e556;
+  color:#f1e556;
+  background-color:#0000;
+}
+
+.header .button.saffron.filled:hover{
+  border-color:#ffa456;
+  color:#ffa456;
+  background-color:#0000;
+}
+.header .button.white{
+  border-color:#fff;
+  color:#fff;
+}
+
+.header .button.white:hover{
+  border-color:#fff;
+  color:#000;
+  background-color:#fff;
+}
+/* header menus*/
+.header{
+  display: flex !important;  
+}
+
+.header .menus{
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  right: 0px;
+}
+
+.header .menus .menu{
+  float: right;
+  border: 0px solid #0000 !important;
+  color: #ff9f5e !important;
+  background-color: #0000;
+  font: normal 100% Ubuntu , Verdana;
+  padding-left: 3%;
+  padding-right: 2%;
+  margin: auto;
+}
+.header .menus .button{
+  float: right;
+}
+
+.header .menus .menu:hover{
+
+}
+
+.header .menus .menu:nth-of-type(1){
+  color: #35d2ff;
+}
+.header .menus .menu:nth-of-type(1):hover{
+  color: white;
+}
+
+#home-back1{
+  width:100%;
+  position:fixed;
+  top:0px;
+  left:0px;
+  height:400px;
+  background:url('../img/back8.jpg') no-repeat;
+  background-size: cover;
+  overflow:hidden;
+  z-index:-1;
+}
+
+#home-back1 div{
+  width:100%;
+  position:absolute;
+  top:0px;
+  left:0px;
+  height:400px;
+  background:#0004
+}
+.form{
+  box-shadow: none;
+}
+.form#search{
+  display:block;
+  position: relative;
+  width:fit-content;
+  /* right: 80%; */
+  float:right !important;
+  border:1px solid #ff76002b;
+  box-shadow:0px 0px #93a1ad;
+  background:#ffffff;
+  box-sizing:border-box;
+  padding:10px;
+}
+
+.form#search #ageFrom , .form#search #ageTo {
+  width:80px;
+}
+
+.form#search #ageFrom + .label{
+  margin:5px;
+}
+/******************************/
+
+#our-spec{
+  position:relative;
+  width:fit-content;
+  max-width:50%;
+  font:normal 100%  Ubuntu , Verdana;
+  color:#ffe8c9;
+  padding:1%;
+  margin:1%;
+  border:1px solid #86868612; 
+  border-radius:5px;
+  background-color:rgba(27, 26, 26, 0.12);
+  transform:translate(0,10px);
+}
+
+#our-spec label {
+  display:block;
+  margin:10px 0px 0px 0px;
+  padding-left:20px;
+}
+
+#our-spec label:before{
+  content:'';
+  position:relative;
+  margin:0px 0px -15px -15px;
+  display:block;
+  width:10px;
+  height:10px;
+  background-color:#ffe5c3;
+  border-radius:10px;
+}
+
+  #login-top-back{
+    position:absolute;
+    width:100%;
+    height:40vh;
+    z-index:-1;
+  }
+  
+#login-top-back img{
+  width:100%;
+  height:100%;
+}
+
+/*
+ css for mobile
+*/
+@media only screen and (min-device-width:320px)  { 
+ 
+  #home-back1{
+    height:700px;
+  }
+  #home-back1 div{
+    height:700px;
+  }
+}
