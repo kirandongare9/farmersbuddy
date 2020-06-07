@@ -15,6 +15,7 @@ public class Answer {
 	private List<AnswerAttribute> attributes;
 	
 	private int likes;
+	private String createdByRole;
 	
 	public int getAnswerId() {
 		return answerId;
@@ -57,6 +58,12 @@ public class Answer {
 	}
 	public void setLikes(int likes) {
 		this.likes = likes;
+	}
+	public String getCreatedByRole() {
+		return createdByRole;
+	}
+	public void setCreatedByRole(String createdByRole) {
+		this.createdByRole = createdByRole;
 	}
 	
 	

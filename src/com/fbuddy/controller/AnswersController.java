@@ -2,9 +2,6 @@ package com.fbuddy.controller;
 
 import java.io.IOException;
 
-import java.net.http.HttpResponse;
-import java.util.List;
-
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
@@ -18,13 +15,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.fbuddy.dto.Answer;
-import com.fbuddy.dto.Question;
 import com.fbuddy.service.AnswerService;
 import com.fbuddy.util.CommonUtils;
 
 @Controller
 @RequestMapping(value="answers")
 public class AnswersController {
+
 
 	@Autowired
 	AnswerService service;
@@ -106,5 +103,6 @@ public class AnswersController {
 			e.printStackTrace();
 		}
 	}
+	
 	
 }

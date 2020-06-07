@@ -12,9 +12,11 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.fbuddy.dto.Answer;
 import com.fbuddy.dto.User;
 import com.fbuddy.service.UserService;
 
@@ -30,6 +32,9 @@ public class UserController {
 		model.addAttribute("user",new User());
 		return "user/login";
 	}
+	
+	
+
 	
 	@PostMapping(value="/login")
 	public void login(@ModelAttribute("user") User user,BindingResult result,HttpServletRequest req, HttpServletResponse res,Model model) {

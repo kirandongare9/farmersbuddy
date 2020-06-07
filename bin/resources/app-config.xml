@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:mvc="http://www.springframework.org/schema/mvc"
+xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+<context:component-scan base-package="com.fbuddy.*" />
+
+<bean
+class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<property name="prefix">
+<value>/WEB-INF/views/</value>
+</property>
+<property name="suffix">
+<value>.jsp</value>
+</property>
+</bean>
+
+<mvc:interceptors>
+    <bean id="loggerInterceptor" class="com.fbuddy.util.LoginInterceptor"/>
+</mvc:interceptors>
+
+<mvc:cors>
+<mvc:mapping path="/**" 
+allowed-origins="http://localhost:4200"
+allowed-methods="POST, GET, PUT, DELETE,HEAD"
+allow-credentials="false"
+allowed-headers="Content-Type,X-Requested-With,accept,Origin,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization"
+exposed-headers="Origin,Access-Control-Request-Method,Access-Control-Allow-Origin,Access-Control-Allow-Credentials"
+/>
+</mvc:cors> 
+<mvc:resources mapping="/resources/**" location="/resources/" />
+ 
+<mvc:annotation-driven />
+</beans>

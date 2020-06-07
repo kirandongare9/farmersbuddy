@@ -25,6 +25,12 @@
 					<div class="cards-list">
 						<c:forEach items="${question.getAnswers()}"	var="answer">
 							<div class="card" >
+								<div class="card-tags">
+									<c:if test="${answer.getCreatedByRole() == 'officer' }">
+										<div class="card-tag">Answered By Officer</div>
+									</c:if>
+									
+								</div>
 								<label> <c:out value="${answer.getAnswer()  }" /> </label>
 								<div class="card-options">
 									<span class="icon small like" nav="/Farmers-Buddy/answers/like/${answer.getAnswerId()}"></span><span class="like-count">${ answer.getLikes()}</span>

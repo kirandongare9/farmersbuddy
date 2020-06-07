@@ -70,7 +70,7 @@ public class QuestionDaoImpl implements QuestionDao{
 	}
 
 	public List<Answer> getAnswers(int questionId) {
-		String sql = "select * from answers where question_id = ? ";
+		String sql = "select ans.*,usr.role created_by_role from answers ans inner join users usr on usr.username = ans.created_by where ans.question_id = ?";
 		List<Map<String, Object>> result = jt.queryForList(sql,questionId);
 		List<Answer> answers = new ArrayList<Answer>();
 		
@@ -83,6 +83,7 @@ public class QuestionDaoImpl implements QuestionDao{
 			answer.setCreatedDate(row.get("created_date")+"");
 			answer.setAnswer(row.get("answer")+"");
 			answer.setLikes(Integer.parseInt(row.get("likes").toString()));
+			answer.setCreatedByRole(row.get("created_by_role")+"");
 			answers.add(answer);
 		});
 		

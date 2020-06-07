@@ -1,0 +1,662 @@
+/* spinner style */
+
+.spinner-eff {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.spinner-eff:before,
+.spinner-eff:after {
+    content: "";
+    display: block;
+}
+
+.spinner-eff .spinner-bar:before,
+.spinner-eff .spinner-bar:after {
+    content: "";
+    display: block;
+}
+
+
+/* spinner-3 styles */
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    50% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    50% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes pulse-2 {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+@keyframes pulse-2 {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+.spinner-eff.spinner-eff-3 .circle {
+    border-radius: 100px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+
+.spinner-eff.spinner-eff-3 .circle-1 {
+    width: 100%;
+    height: 100%;
+    background-color: #60f691;
+    top: 0;
+    -webkit-animation: pulse 1.6s linear 0s infinite;
+    animation: pulse 1.6s linear 0s infinite;
+}
+
+.spinner-eff.spinner-eff-3 .circle-2 {
+    width: 66.6%;
+    height: 66.6%;
+    background-color: #0CCA4A;
+    top: 16.5%;
+    -webkit-animation: pulse-2 1.6s linear 0s infinite;
+    animation: pulse-2 1.6s linear 0s infinite;
+}
+
+.spinner-eff.spinner-eff-3 .circle-3 {
+    width: 33.3%;
+    height: 33.3%;
+    background-color: #0CCA4A;
+    top: 33.3%;
+}
+
+.spinner.hide {
+    display: none;
+}
+
+.spinner.show {
+    display: block;
+}
+
+
+/*
+btns and other component
+*/
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("./fonts/Ubuntu-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("./fonts/Ubuntu-Bold.ttf");
+    font-weight: bold;
+}
+
+* {
+    font: normal 100% 'Ubuntu';
+}
+
+.body {
+    position: fixed;
+    top: 70px;
+    left: 10%;
+    width: 90%;
+    height: 90vh;
+    padding: .5%;
+    background: rgb(245, 248, 249);
+    box-sizing: border-box;
+    overflow: scroll;
+}
+
+.start-game {
+    width: 50%;
+    margin: auto;
+}
+
+.card {
+    padding: 2%;
+    margin-top: 1%;
+    background: white;
+}
+
+.card label {
+    color: #6c9398;
+}
+
+.txt {
+    background: white;
+    border: 1px solid #b4dfec;
+    border-radius: 2px;
+    height: 30px;
+    width: 60%;
+    padding-left: 1%;
+    color: #ab96b1;
+}
+
+.card input {
+    margin-bottom: 2%;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.card .title {
+    font: bold 100% 'Ubuntu';
+    color: #67b7fd;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.card .title label {
+    color: inherit;
+}
+
+.btn {
+background: #6fd63a;
+color: white;
+border: 0px solid #e8a864;
+padding: .8%;
+padding-left:2%;
+padding-right:2%;
+border-radius: 5px;
+}
+
+.card .btn {
+  margin-top:1% !important;
+  margin-bottom:1% !important;
+  padding: 1%;
+  padding-left:2%;
+  padding-right:2%;
+  border-radius: 5px;
+}
+
+.btn.disabled {
+    background: #e0dddd;
+    color: #3a363e;
+}
+
+.card-list {
+  margin-top:1%;
+  /*! padding:1%; */
+  background:#e6eaea00;
+  border-radius:10px;
+}
+
+.card-item {
+  font:normal 14px 'Ubuntu' !important;
+  padding:.5%;
+  background:white;
+  border-radius:5px;
+  width:90%;
+  padding-left:1%;
+  margin-top:1%;
+}
+.card-item .card-item-title{
+  margin-left: -1%;
+  color:#56a09a;
+  padding-left:1%;
+  padding-bottom:1%;
+  width:100%;
+  border-bottom:1px solid #e5eff1;
+}
+
+.card-item .card-item-body {
+    color: rgb(139, 135, 140);
+    margin-top: 1%;
+}
+
+.card-item .btn {
+    font: normal 90% 'Ubuntu';
+    margin-top: 1%;
+    padding: .8%;
+    padding-left: 1%;
+    padding-right: 1%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.btn.red {
+    background: #ff4040;
+}
+
+.btn.blue {
+    background: #42bdf5;
+}
+
+.btn.warn {
+    background: #ffbc2c;
+    color: #1f0202;
+}
+
+.btn+.btn {
+    margin-left: 1%;
+}
+
+.card-body lable {
+    font: bold 100% 'Ubuntu';
+    color: #6d6d6d !important;
+}
+
+.card-body lable span {
+    margin-left: .3%;
+    font: italic bold 90% 'Ubuntu';
+    color: #6b747b;
+}
+
+.card-body input {
+    margin: .5% 0% 1% 0%;
+}
+
+.card {
+  margin:auto;
+  padding: 1%;;
+}
+
+.card-body button {
+    width: auto;
+    cursor: pointer;
+}
+
+
+/*style for sidebar */
+#sidebar{
+  position: fixed;
+  width: 5%;
+  height: 100%;
+  background:#f8f7b8; /* #080808|400357|190222*/
+  left:0px;
+  top:0px;
+}
+
+#sidebar.active-menu{
+  left:0px;
+  width: 10%;
+  transition: all 300ms linear;
+}
+#sidebar .menus{
+  position: absolute;
+  width: 100%;
+  left: 0%;
+  box-sizing: border-box;
+}
+#sidebar.active-menu .menu label{
+  position: relative;
+  left:50%;
+  top:-30px;
+  color:#651212;
+}
+
+#sidebar .menu{
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.918);
+  list-style: none;
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid rgba(243, 140, 6, 0.466);
+  box-sizing: border-box;
+  margin: 0px 0px;
+}
+
+#sidebar .menu:hover{
+  border-bottom: 5px solid rgba(5, 16, 36, 0.79);
+  background: rgb(245, 248, 246);
+  color: rgb(255, 255, 255 , 0.89);
+}
+#sidebar .menu-icon{
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 50%;
+  left: 4%;
+  transform: translateY(-50%);
+}
+#sidebar .menu-icon.home{
+  background-image: url('/resources/img/home2.png') ;
+  background-size: contain;
+}
+#sidebar .menu-icon.about{
+  background-image: url('/resources/img/about1.png') ;
+  background-size: contain;
+}
+#sidebar .menu-icon.logout{
+  background-image: url('/resources/img/logout1.png') ;
+  background-size: contain;
+}
+
+#sidebar .prof{
+  box-sizing: border-box;
+  position: static;
+  top:2%;
+  left: 20%;
+  margin-top: 3%;
+  margin-left: 20%;
+  background-image: url('../img/user1.png') ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 6vw;
+  height: 6vw;
+  -webkit-transition-timing-function: ;
+}
+
+#prof-username {
+    position: relative;
+    top: 1%;
+    left: 0%;
+    text-align: center;
+}
+
+.prof-username {
+    margin: 4% 0% 4% 0%;
+    text-align: center;
+    color: #f7610d;
+}
+
+
+/*******************  style for sidebar ends here ************************/
+
+
+/*  style for header and footer */
+#header{
+  position: fixed;
+  top: 0%;
+  left:8%;
+  margin: 0px;
+  padding: 0px 0px;
+  width:100%;
+  height:70px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: solid 2px rgba(95, 109, 141, 0.24);
+  border:0px solid ;
+}
+#header.active-menu{
+  left:10%;
+  transition: all 300ms linear;
+}
+
+#header .user-nav{
+  position: fixed;
+  top:0px;
+  right: 0%;
+  margin: 0px 0px;
+  padding: 0px 0px;
+  width:10%;
+  height:70px;
+}
+
+#header .user-nav:hover{
+  background: rgba(155, 155, 169, 0.76);
+  transition: all 400ms linear;
+}
+
+#header .user-nav .help{
+  position: absolute;
+  top:50%;
+  right: 10%;
+  width: 50px;
+  height: 50px;
+  background-image: url('../img/help.png') ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translateY(-50%);
+}
+
+/*footer starts */
+
+#footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    height: 5vh;
+    width: 100%;
+    color: #128097;
+    margin: 0px;
+    padding: 3px 15%;
+    background: rgb(255, 255, 255);
+    font: 90% "Ubuntu", verdana;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+#header #title .title {
+  position: absolute;
+  top:10%;
+  left:3%;
+  font:bold 180%   Consolas , "Segoe UI" , Ubuntu ;
+  color: rgb(10, 30, 102);
+}
+#header #title .title span{
+  font:bold 50% "Segoe UI" , Ubuntu ;
+}
+#footer span.red {
+    color: #f6100ad6;
+}
+
+#footer span.orange {
+    color: #f64f0ad6;
+}
+
+#footer span.blue {
+    color: #2146e8fa;
+}
+
+#footer span.yellow {
+    color: #e6d35b;
+}
+
+span.love-icon {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: url('../img/like.png') no-repeat;
+    background-size: cover;
+}
+
+.hide {
+    display: none !important;
+}
+
+
+/************  style for header and footer  ends here ***************
+
+/*
+custom for home
+*/
+#start-new-btn {
+  margin-left: 2%;
+}
+
+.tabs-bodies {
+  background-color: rgba(0,0,0,0) !important;
+}
+
+/*********************************************
+ style for help cards
+********************************/
+.popup-card{
+    background:#fdfeff;
+    padding:1%;
+    width:fit-content !important;
+    height:fit-content;
+    border-radius:10px;
+    font:normal 100% 'Ubuntu' ,'Segoe UI' , sans-serif;
+    box-shadow:0px 0px 2px 2px #c8deff;
+    border:1px solid #a6caff;
+}
+
+.center{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%)
+}
+
+.popup-card.tip .close-btn{
+    float:right;
+    width:fit-content;
+    height:fit-content;
+    background:#06182800;
+    padding:2px;
+    padding-left:1%;
+    padding-right:1%;
+    margin-right:0%;
+    font:bold 100% 'Segoe UI';
+    color:#1a81db;
+    border-radius:50px;
+}
+.popup-card.tip .close-btn:hover{
+    background:#061828;
+}
+
+.popup-card.tip .close-btn:before{
+    content:'X'
+}
+
+.popup-card.tip .card-head{
+    marging:0px;
+    background:#ff000000;
+    width:100%;
+    height:fit-content;
+    padding:2px;
+    margin-bottom:5px;
+    font-size:90%;
+    padding-left:1%;
+    color:#16bfe5;
+    font:bold 90% 'Ubuntu';
+}
+
+.popup-card.tip .card-body{
+    margin-top:2%;
+    margin-left:2%;
+    color: #525d67;
+}
+.popup-card.tip .card-body img{
+    margin-top:2%;
+    margin-left:4%;
+    border-radius:2px;
+    box-shadow:0px 0px 2px 2px #f0f5f9;
+}
+
+.popup-card.tip .card-footer{
+    margin-top:2%;
+}
+.popup-card.tip .card-footer button {
+    background:#0999ff;
+    border:1px solid #a0d3ff;
+    border-radius:5px;
+    padding:6px 12px 6px 12px;
+    box-shadow:0px 0px 2px 2px #79bcf6;
+    font: bold 95% 'Ubuntu';
+    color:#fefefe;
+}
+
+.popup-card.tip .footer button:hover{
+    background:#f0f8ff08;
+    color:#03A9F4;
+}
+.popup-card.tip .card-footer button.right{
+    float:right;
+    margin-right:5%;
+}
+.popup-card.tip .card-footer button.transparent{
+    background:#00000000;
+    color:#0999ff;
+}
+
+.popup-card.tip .card-footer button.dark{
+    background:#170101;
+    color:#feffff;
+}
+.popup-card.tip .card-footer button.dark:hover{
+    background:#feffff;
+    color:#0999ff;
+}
+
+
+/*green theme*/
+.popup-card.green{
+    box-shadow:0px 0px 2px 2px #a5fd9f;
+    border:1px solid #b0ffbd;
+}
+.popup-card.tip.green .card-head{
+    color:#17d60a;
+    font:bold 90% 'Ubuntu' !important;
+}
+.popup-card.tip.green .body{
+    color:#06420c;
+}
+.popup-card.tip.green button{
+    background:#05b10d;
+    color:#e7f6e7;
+    border:1px solid #b2f3bd;
+    box-shadow:0px 0px 2px 2px #79f67d;
+}
+
+.popup-card.tip.green .card-footer button.transparent{
+    background:#01100300;
+    color:#40da40;
+    border:1px solid #43e65e;
+    box-shadow:0px 0px 2px 2px #5cf160;
+}
+.popup-card.tip.green .card-footer button.dark{
+    background:#011003fa;
+    color:#f8faf8;
+    border:1px solid #43e65e;
+    box-shadow:0px 0px 2px 2px #5cf160;
+}
+.popup-card.tip.green .close-btn{
+    color:#60d160;
+}

@@ -26,6 +26,7 @@ public class LoginInterceptor implements HandlerInterceptor{
 	      nonAllowedPaths.add( path -> path.contains("/give/"));
 	      nonAllowedPaths.add( path -> path.contains("/edit"));
 	      nonAllowedPaths.add( path -> path.contains("/delete"));
+	      nonAllowedPaths.add( path -> path.contains("/admin"));
 	  	  
 	      boolean restricted = false;
 	      for(int i=0;i<nonAllowedPaths.size();i++) {

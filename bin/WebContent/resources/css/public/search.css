@@ -1,0 +1,91 @@
+.filters .form{
+    background-color: #fff;
+    width: 96%;
+    text-align: left;
+    margin-bottom:0px;
+    border-radius:5px;
+    border-bottom-left-radius:0px;
+    border-bottom-right-radius:0px;
+    font:normal 99.99% Ubuntu , Verdana ;
+}
+.filters .form .title{
+    font:normal 100% Ubuntu , Verdana;
+}
+.filters + .cards-list{
+    border-top-left-radius:0px;
+    border-top-right-radius:0px;
+    background-color:#fff;
+    border:0px solid;
+}
+.filters + .cards-list .card-title{
+ border:0px solid;
+ text-align:center;
+}
+
+.profiles{
+    width:100%;
+    background-color:#f3eeee00;
+    overflow:auto;
+    padding:0px;
+    display:flex;
+    flex-flow:row wrap;
+}
+
+.profiles .profile{
+    height:fit-content;
+    width:24%;
+    min-width:220px;
+    text-align:center;
+    padding: 0px;
+    border: 1px solid #0a688254;
+}
+
+.profiles .profile .profile-picture{
+    width:fit-content;
+    height:fit-content;
+    position:relative;
+    top:0px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.profiles .profile .profile-picture img{
+ display:block;
+ width: 100%;
+ height: auto;
+ /* border-radius:50%; */
+ /* border:1px solid #ffbd64; */
+}
+
+.profiles .profile .profile-info{
+    /* margin-top:2%; */
+    background-color:white;
+    padding: 4%;
+    /* border-radius:5px; */
+    /* border:1px solid #b3c1c7; */
+    color:#0d98e6;
+}
+.profiles .profile .profile-info button{
+    margin-top:5%;
+}
+
+.profiles .profile .profile-info label{
+    display:block;
+}
+
+/*
+ css for mobile
+*/
+@media only screen and (min-device-width:320px){ 
+.profile{
+    width:100% !important;
+}
+
+}
+
+
+@media (min-device-width:961px){
+ .profile{
+     width:24% !important;
+ }
+}
