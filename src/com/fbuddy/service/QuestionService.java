@@ -13,5 +13,6 @@ public interface QuestionService {
 	public Question get(int questionId);
 	public List<Question> get();
 	public List<Answer> getAnswers(int questionId);
-	
+
+	public void like(int questionId);
 }

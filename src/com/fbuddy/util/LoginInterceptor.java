@@ -24,6 +24,8 @@ public class LoginInterceptor implements HandlerInterceptor{
 	      List<Function<String, Boolean>> nonAllowedPaths = new ArrayList<Function<String,Boolean>> ();
 	      nonAllowedPaths.add( path -> path.contains("/post"));
 	      nonAllowedPaths.add( path -> path.contains("/give/"));
+	      nonAllowedPaths.add( path -> path.contains("/edit"));
+	      nonAllowedPaths.add( path -> path.contains("/delete"));
 	  	  
 	      boolean restricted = false;
 	      for(int i=0;i<nonAllowedPaths.size();i++) {

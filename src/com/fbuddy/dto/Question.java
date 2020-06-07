@@ -11,6 +11,8 @@ public class Question {
 	private String question;
 	private String createdBy;
 	private String createdDate;
+	private int likes;
+	
 	private List<QuestionAttribute> attributes;
 	private List<Answer> answers;
 	
@@ -50,8 +52,12 @@ public class Question {
 	public void setAnswers(List<Answer> answers) {
 		this.answers = answers;
 	}
-	
-	
+	public int getLikes() {
+		return likes;
+	}
+	public void setLikes(int likes) {
+		this.likes = likes;
+	}
 	
 	
 }

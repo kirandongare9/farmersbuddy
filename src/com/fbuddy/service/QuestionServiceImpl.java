@@ -46,4 +46,10 @@ public class QuestionServiceImpl implements QuestionService{
 		return dao.getAnswers(questionId);
 	}
 
+	@Override
+	public void like(int questionId) {
+		dao.like(questionId);
+		
+	}
+
 }

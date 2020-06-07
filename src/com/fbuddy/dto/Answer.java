@@ -14,6 +14,8 @@ public class Answer {
 	private String createdDate;
 	private List<AnswerAttribute> attributes;
 	
+	private int likes;
+	
 	public int getAnswerId() {
 		return answerId;
 	}
@@ -49,6 +51,12 @@ public class Answer {
 	}
 	public void setAttributes(List<AnswerAttribute> attributes) {
 		this.attributes = attributes;
+	}
+	public int getLikes() {
+		return likes;
+	}
+	public void setLikes(int likes) {
+		this.likes = likes;
 	}
 	
 	

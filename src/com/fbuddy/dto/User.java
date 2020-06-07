@@ -16,7 +16,7 @@ public class User {
 	private String dob;
 	private String state;
 	private String city;
-	
+	private String role;
 	
 	public int getId() {
 		return id;
@@ -83,6 +83,12 @@ public class User {
 	}
 	public void setCity(String city) {
 		this.city = city;
+	}
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
 	}
 	
 	

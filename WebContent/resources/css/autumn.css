@@ -144,7 +144,7 @@ body{
   width:100%;
   overflow:auto;
   box-sizing:border-box;
-  padding:2%;
+  padding: 1%;
   box-shadow:none;
   background-color:#fff6ff;
   border:1px solid #e0d8ce;
@@ -451,7 +451,7 @@ body{
 
 
 .hide{
-  display:none;
+  display:none !important;
 }
 .show{
   display:block;
@@ -644,14 +644,37 @@ body{
 
 button.button {}
 .card .button + .button {
-  background-color:#10abea;
-  color:white;
+  
+  /*background-color:#10abea;
+  color:white;*/
 }
 .button + .button{
-  margin-left:1%;
+  margin-left:5px;
 }
 .card .button.bold{
   font:bold 100% Ubuntu;
+}
+
+.button.danger{
+  background-color:#ffbaad;
+  border:1px solid #ff6605;
+  color: #a51010;
+}
+
+.button.success{
+  background-color: #8cffa6 !important;
+  border:1px solid #30c721;
+  color: #145508 !important;
+}
+
+.button.warn{
+  background-color:#fffd94;
+  border:1px solid #9ca533;
+}
+
+.button.inactive{
+  background-color:#ececec;
+  border:1px solid #636667;
 }
 
 .card .input , .cards-list .input{
@@ -698,6 +721,10 @@ position:absolute;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%)
+}
+.card .card-options{
+  display:inline-block;
+  float:right;
 }
 
 /*
@@ -1072,7 +1099,10 @@ body{
  }
 
 }
-
+.no-top-up-margin{
+	margin-top:0px !important;
+	margin-bottom:0px !important;
+}
 
 @media (min-device-width:961px){
   .header #title label{

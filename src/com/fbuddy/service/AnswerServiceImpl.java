@@ -37,4 +37,9 @@ public class AnswerServiceImpl implements AnswerService{
 		return dao.get(id);
 	}
 
+	@Override
+	public void like(int answerId) {
+		dao.like(answerId);
+	}
+
 }

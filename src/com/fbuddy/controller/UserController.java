@@ -39,6 +39,7 @@ public class UserController {
 			if(user!=null) {
 				HttpSession session = req.getSession(true);
 				session.setAttribute("username", user.getUserName());
+				session.setAttribute("role", user.getRole());
 				res.sendRedirect("/Farmers-Buddy");
 			}else {
 				res.sendRedirect("/Farmers-Buddy/users/login");

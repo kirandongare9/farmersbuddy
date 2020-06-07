@@ -1,4 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +19,9 @@
 	<jsp:include page="../header.jsp" />
 	
 	<div class="body">
+	
 		<!-- form -->
+		<form:form method="post" modelAttribute="officer" action="signup">
 		<div class="form fit">
                 <div class="form-header">
                     <div class="title"> Join Farmers Buddy </div>
@@ -25,15 +30,21 @@
                 <div class="form-body box center inline">
                 <div class="inline-body">
                     <div class="element inline">
-                        <div class="label"> Full Name </div>
+                        <div class="label"> First Name </div>
                         <div class="control">
-                            <input type="text" id="name" class="textbox"/>
+                            <form:input type="text" path="user.firstName" class="textbox"/>
+                        </div>
+                    </div>
+                    <div class="element inline">
+                        <div class="label"> Last Name </div>
+                        <div class="control">
+                            <form:input type="text" path="user.lastName" class="textbox" />
                         </div>
                     </div>
                     <div class="element inline">
                         <div class="label"> E-Mail </div>
                         <div class="control">
-                            <input type="text" id="email" class="textbox" />
+                            <form:input type="text" path="user.email" id="email" class="textbox" />
                             <label class="err-msg">Enter valid email</label>
                         </div>
                     </div>
@@ -49,14 +60,14 @@
                     <div class="element inline">
                         <div class="label">Date Of Birth</div>
                         <div class="control">
-                            <input type="date" class="textbox">
+                            <form:input type="date" path="user.dob" class="textbox"/>
                         </div>
                     </div>
                     <div class="element inline">
                         <div class="label"> State </div>
                         <div class="control">
                             <div class="auto-list">        
-                                <input type="text" class="textbox" id="state" >
+                                <form:input type="text" path="user.state" class="textbox" id="state" />
                                 <options>
                                     <option>mahrashtra</option>
                                     <option>gujarat</option>
@@ -70,7 +81,7 @@
                         <div class="label"> City </div>
                         <div class="control">
                             <div class="auto-list">        
-                                <input type="text" class="textbox" id="city" >
+                                <form:input type="text" path="user.city" class="textbox" id="city" />
                                 <options>
                                     <option>Kolhapur</option>
                                     <option>Pune</option>
@@ -83,28 +94,26 @@
                     <div class="element inline">
                         <div class="label"> Qualification </div>
                         <div class="control">
-                            <input type="text" id="qualification" class="textbox" />
-                            <label class="err-msg">Enter valid Qualification</label>
+                            <form:input type="text" path="qualification" id="qualification" class="textbox" />
                         </div>
                     </div>
                     <div class="element inline">
                         <div class="label"> Designation </div>
                         <div class="control">
-                            <input type="text" id="designation" class="textbox" />
-                            <label class="err-msg">Enter valid Qualification</label>
+                            <form:input type="text" path="designation" id="designation" class="textbox" />
                         </div>
                     </div>
                     <div class="element inline">
                         <div class="label"> User Name </div>
                         <div class="control">
-                            <input type="text" id="username" class="textbox" />
+                            <form:input type="text" path="user.userName" id="username" class="textbox" />
                             <label class="err-msg">User Name already taken</label>
                         </div>
                     </div>
                     <div class="element inline">
                         <div class="label"> Password </div>
                         <div class="control">
-                            <input type="password" id="pswd" class="textbox" />
+                            <form:input type="password" path="user.pswd" id="pswd" class="textbox" />
                             <label class="err-msg">Enter strong password</label>
                         </div>
                     </div>
@@ -122,6 +131,8 @@
                     </div>
                 </div>
             </div>
+            </form:form>
+            
         </div>
 
 

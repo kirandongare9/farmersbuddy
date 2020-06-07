@@ -60,7 +60,3 @@ $.dailog = ( el , config) => {
     
     return config.dailogNode;
 };
-
-function filterQuestion(e){ 
-	console.log(e);
-}

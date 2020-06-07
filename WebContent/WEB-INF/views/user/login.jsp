@@ -20,7 +20,7 @@
 	  
         <div class="body login">
 		<!-- form -->
-		<form:form method="post" modelAttribute="user" action="login">
+		<form:form method="post" modelAttribute="user" action="../users/login">
 		<div class="login-form form fit">
                 <div class="form-header">
                     <div class="title"> Login  </div>

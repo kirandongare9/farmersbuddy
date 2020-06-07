@@ -238,6 +238,32 @@ body{
   height:100%;
 }
 
+.cards-list .card label{
+  /* background-color:#f6f6f6 !important; */
+  padding:5px;
+  border-radius:3px;
+  font:normal 110% 'Ubuntu';
+}
+.cards-list .card .button{
+  font:normal 95% 'Ubuntu' !important;
+  padding:7px;
+}
+
+.like-count{
+  width:max-content;
+  padding:3px;
+  display:inline-block;
+  color:#3ab6fa;
+  background-color:#f1f9ff;
+  position:relative;
+  transform:translate(-5px,-20px);
+  border:1px solid;
+  border-radius:5px;
+}
+
+.card .hide{
+  display:none !important;
+}
 /*
  css for mobile
 */

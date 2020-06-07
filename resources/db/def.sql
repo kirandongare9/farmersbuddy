@@ -16,10 +16,18 @@ state varchar(60),
 city varchar(60),
 email varchar(40),
 created_by varchar(60),
-crea0000000000ted_date varchar(60)
+created_date varchar(60)
 );
 
+alter table users add column role varchar(60);
+
 truncate table users;
+
+create table agri_officers(
+username varchar(20),
+qualification varchar(60),
+designation varchar(60)	
+);
 
 drop table questions;
 create table questions(
@@ -28,6 +36,9 @@ create table questions(
     created_date varchar(60),
     created_by varchar(60)  
 );
+
+alter table questions add column likes int;
+alter table questions alter likes set default 0;
 
 drop table question_attributes;
 create table question_attributes(
@@ -47,6 +58,8 @@ create table answers(
     created_by varchar(60),
     created_date varchar(60)
 );
+alter table answers add column likes int;
+alter table answers alter likes set default 0;
 
 drop table answer_attributes;
 create table answer_attributes(
